@@ -71,7 +71,7 @@ namespace Acme.Biz.Tests
             var actual = vendor.PlaceOrder(product, 12);
 
             // Assert
-            Assert.AreEqual(expected.Success, actual.Success);
+            Assert.AreEqual(expected.Result, actual.Result);
             Assert.AreEqual(expected.Message, actual.Message);
         }
         [TestMethod()]
@@ -90,7 +90,7 @@ namespace Acme.Biz.Tests
                 new DateTimeOffset(2019, 2, 25, 0, 0, 0, new TimeSpan(-7, 0, 0)));
 
             // Assert
-            Assert.AreEqual(expected.Success, actual.Success);
+            Assert.AreEqual(expected.Result, actual.Result);
             Assert.AreEqual(expected.Message, actual.Message);
         }
 
@@ -123,7 +123,7 @@ namespace Acme.Biz.Tests
                                 instructions: "Deliver to Suite 42");
 
             // Assert
-            Assert.AreEqual(expected.Success, actual.Success);
+            Assert.AreEqual(expected.Result, actual.Result);
             Assert.AreEqual(expected.Message, actual.Message);
         }
 
