@@ -63,7 +63,7 @@ namespace Acme.Biz.Tests
             // Arrange
             var vendor = new Vendor();
             var product = new Product(1, "Saw", "");
-            var expected = new OperationResult(true,
+            var expected = new OperationResult<bool>(true,
                 "Order from Acme, Inc\r\nProduct: Saw\r\nQuantity: 12" +
                                      "\r\nInstructions: standard delivery");
 
@@ -80,7 +80,7 @@ namespace Acme.Biz.Tests
             // Arrange
             var vendor = new Vendor();
             var product = new Product(1, "Saw", "");
-            var expected = new OperationResult(true,
+            var expected = new OperationResult<bool>(true,
                 "Order from Acme, Inc\r\nProduct: Saw\r\nQuantity: 12" +
                 "\r\nDeliver By: " + new DateTime(2019,2,25).ToString("d") +
                 "\r\nInstructions: standard delivery");
@@ -114,7 +114,7 @@ namespace Acme.Biz.Tests
             // Arrange
             var vendor = new Vendor();
             var product = new Product(1, "Saw", "");
-            var expected = new OperationResult(true,
+            var expected = new OperationResult<bool>(true,
                         "Order from Acme, Inc\r\nProduct: Saw\r\nQuantity: 12" +
                         "\r\nInstructions: Deliver to Suite 42");
 
